@@ -4,10 +4,15 @@
 
 ## Overview
 This small tool is a **manual implementation of simple stereo-matching**. Two rectified images taken from different views (left and right)
+
 ![Left image](/data/Adirondack_left.png)
+
 ![Right image](/data/Adirondack_right.png)
+
 are combined to a **depth image** by means of two **matching algorithms**, a simple **winner-takes-it-all (WTA)** or more sophisticated **semi-global matching (SGM)** with several **matching costs** (**Sum of Absolute Differences (SAD), Sum of Squared Differences (SAD) or Normalized Cross-Correlation (NCC)**).
+
 ![Depth image](/output/Adirondack_NCC_SGM_D70_R3_appX0,92.jpg)
+
 The results are compared to a ground-truth using the accX accuracy measure excluding occluded pixels with a mask.
 
 ### Formulas

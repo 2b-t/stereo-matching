@@ -3,11 +3,11 @@
 *Author: Tobit Flatscher (January 2020)
 
 ## Overview
-This small tool is a **manual implementation of simple stereo-matching**. Two rectified images taken from different views (left and right)
+This small tool is a **manual implementation of simple stereo-matching**. Two rectified images taken from different views:
 
-![Left image](/data/Adirondack_left.png)
-
-![Right image](/data/Adirondack_right.png)
+Left image             |  Right image
+:-------------------------:|:-------------------------:
+![Left image](/data/Adirondack_left.png) | ![Right image](/data/Adirondack_right.png)
 
 are combined to a **depth image** by means of two **matching algorithms**, a simple **winner-takes-it-all (WTA)** or more sophisticated **semi-global matching (SGM)** with several **matching costs** (**Sum of Absolute Differences (SAD), Sum of Squared Differences (SAD) or Normalized Cross-Correlation (NCC)**).
 

@@ -11,7 +11,7 @@ Left image             |  Right image
 
 are combined to a **depth image** by means of two **matching algorithms**, a simple **winner-takes-it-all (WTA)** or more sophisticated **semi-global matching (SGM)** with several **matching costs** (**Sum of Absolute Differences (SAD), Sum of Squared Differences (SAD) or Normalized Cross-Correlation (NCC)**).
 
-![Depth image](/output/Adirondack_NCC_SGM_D70_R3_appX0,92.jpg)
+![Depth image](/output/Adirondack_NCC_SGM_D70_R3_accX0,92.jpg)
 
 The results are compared to a ground-truth using the accX accuracy measure excluding occluded pixels with a mask.
 
@@ -19,8 +19,8 @@ The results are compared to a ground-truth using the accX accuracy measure exclu
 For the precise details of the involved formulas (matching cost, matching algorithms and accuracy measure) refer to `Theory.pdf`.
 
 ### The files
-- `/data/...` Directory for the input images (left and right eye)
-- `/output/...` Directory for the resulting depth-image output
+- `data/` Directory for the input images (left and right eye)
+- `output/` Directory for the resulting depth-image output
 - `Main.ipynb` The Jupyter notebook
 - `stereo_matching.py` The Python implementation of the core functions with Numba and Numpy
 - `Theory.pdf` Explanation of the involved formulas

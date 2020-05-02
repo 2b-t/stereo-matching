@@ -22,7 +22,7 @@ def str_comma(number):
     return str(round(number, 2)).replace('.',',')
 
 
-def export_img(export_image, name, error_measure, matching_method, D, R, appX = 0):
+def export_img(export_image, name, error_measure, matching_method, D, R, accX = 0):
     """
     Export image to disk with an approriate file name
       
@@ -32,15 +32,15 @@ def export_img(export_image, name, error_measure, matching_method, D, R, appX = 
         @param matching_method: the measure used for matching point (e.g. WTA, SGM)
         @param D:               maximum disparity
         @param R:               filter radius
-        @param appX:            appX measure for evaluation (if available)
+        @param accX:            accX measure for evaluation (if available)
 
         @return:                none
     """
 
     filename = name + "_" + error_measure + "_" + matching_method + "_D" + str_comma(D) + "_R" + str_comma(R)
 
-    if appX != 0:
-        filename += "_appX" + str_comma(appX)
+    if accX != 0:
+        filename += "_accX" + str_comma(accX)
 
     imsave(filename + ".jpg", img_as_ubyte(export_image), quality = 100)
     return

@@ -23,7 +23,7 @@ For the precise details of the involved formulas (matching cost, matching algori
 - `output/` Directory for the resulting depth-image output
 - `Main.ipynb` The Jupyter notebook
 - `stereo_matching.py` The Python implementation of the core functions with Numba and Numpy
-- `Theory.pdf` Explanation of the involved formulas
+- `doc/Theory.pdf` Explanation of the involved formulas
 
 ## Launch it
 Copy this folder or directly **clone this repository** by typing

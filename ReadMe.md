@@ -1,6 +1,6 @@
 # Stereo matching
 
-*Author: Tobit Flatscher (January 2020)
+*Author: [Tobit Flatscher](https://github.com/2b-t) (January 2020)
 
 ## Overview
 This small tool is a **manual implementation of simple stereo-matching**. Two rectified images taken from different views:

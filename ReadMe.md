@@ -16,8 +16,8 @@ are combined to a **depth image** by means of two **matching algorithms**:
 
 with several **matching costs**:
 
-- **Sum of Absolute Differences (SAD), **
-- **Sum of Squared Differences (SAD) or **
+- **Sum of Absolute Differences (SAD)**,
+- **Sum of Squared Differences (SAD)** or
 - **Normalized Cross-Correlation (NCC)**.
 
 ![Depth image](/output/Adirondack_NCC_SGM_D70_R3_accX0,92.jpg)

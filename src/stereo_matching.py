@@ -246,7 +246,8 @@ def get_f(D, L1 = 0.025, L2 = 0.5):
     return np.full((D, D), L2) + diags([L1 - L2, -L2, L1 - L2], [-1, 0, 1], (D, D)).toarray()
 
 
-@jit(nopython = True, parallel = True, cache = True)
+# For some reason @jit(nopython = True, parallel = True, cache = True) does not work here!
+@jit
 def compute_message(cv, f):
     """
     Compute the messages in one particular direction for semi-global matching
@@ -322,8 +323,8 @@ def compute_sgm(cv, f):
 
 def main():
     # Load input images
-    im0 = imread("data/Adirondack_left.png")
-    im1 = imread("data/Adirondack_right.png")
+    im0 = imread("../data/Adirondack_left.png")
+    im1 = imread("../data/Adirondack_right.png")
 
     im0g = rgb2gray(im0)
     im1g = rgb2gray(im1)

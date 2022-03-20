@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  stereo_matching_docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #stdin_open: true # Docker run -i
+    tty: true        # Docker run -t
+    privileged: true
+    network_mode: "host"
+    volumes: # Mount relevant folders into container
+      - ../.vscode:/code/stereo_matching/.vscode # Necessary for using VS Code Tasks inside container
+      - ../data:/code/stereo_matching/data
+      - ../doc:/code/stereo_matching/doc
+      - ../src:/code/stereo_matching/src
+      - ../test:/code/stereo_matching/test
+

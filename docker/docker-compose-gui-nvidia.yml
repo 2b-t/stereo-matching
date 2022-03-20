@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  stereo_matching_docker:
+    extends:
+      file: docker-compose-gui.yml
+      service: stereo_matching_docker
+    environment:
+     - NVIDIA_VISIBLE_DEVICES=all
+    runtime: nvidia

@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run",
+      "detail": "Run Jupyter Notebook.",
+      "type": "shell",
+      "command": "jupyter notebook --ip=127.0.0.1 --port=8888 --allow-root",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "test",
+      "detail": "Run all unit tests and show results.",
+      "type": "process",
+      "command": "python3 ${workspaceFolder}/test/run_tests.py",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+      "problemMatcher": []
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 Author: [Tobit Flatscher](https://github.com/2b-t) (January 2020)
 
 ## 0. Overview
-This small tool is a **manual implementation of simple stereo-matching** in Python3. Two rectified images taken from different views:
+This small tool is a **manual implementation of simple stereo-matching** in Python 3. Two rectified images taken from different views:
 
 Left image             |  Right image
 :-------------------------:|:-------------------------:
@@ -33,7 +33,7 @@ The repository is structured as follows:
 - [`docker/`](./docker/) Contains a Docker container as well as a Docker-Compose configuration file
 - [`output/`](./output/) Directory for the resulting depth-image output
 - [`src/Main.ipynb`](./src/Main.ipynb) The Jupyter notebook that allows a convenient access to the underlying Python functions
-- [`src/stereo_matching.py`](./src/stereo_matching.py) The Python3 implementation of the core functions with Numba, Numpy and Matplotlib
+- [`src/stereo_matching.py`](./src/stereo_matching.py) The Python 3 implementation of the core functions with Scipy, Scimage, Numba, Numpy and Matplotlib
 
 ## 1. Download it
 Either download and copy this folder manually or directly **clone this repository** by typing
@@ -55,7 +55,7 @@ If they are not installed on your system yet, install them - ideally with [Anaco
 ```
 $ jupyter notebook
 ```
-Browse and open the Jupyter notebook [`src/Main.ipynb`](./src/Main.ipynb) and run it by pressing the play-button. Alternatively you can also edit the Python-file `stereo_matching.py` in your editor of choice (e.g. VisualStudio Code) and launch it from there.
+Browse and open the Jupyter notebook [`src/Main.ipynb`](./src/Main.ipynb) and run it by pressing the play-button. Alternatively you can also edit the Python-file [`src/stereo_matching.py`](./src/stereo_matching.py) in your editor of choice (e.g. Visual Studio Code) and launch it from there.
 
 ### 2.2 Run from Docker
 

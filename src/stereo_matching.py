@@ -247,6 +247,7 @@ def get_f(D, L1 = 0.025, L2 = 0.5):
 
 
 # For some reason @jit(nopython = True, parallel = True, cache = True) does not work here!
+# See Issue #1: https://github.com/2b-t/stereo-matching/issues/1
 @jit
 def compute_message(cv, f):
     """

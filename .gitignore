@@ -1,0 +1,6 @@
+*.nbc
+*.nbi
+*.pyc
+src/__pycache__/**
+src/.ipynb_checkpoints/**
+

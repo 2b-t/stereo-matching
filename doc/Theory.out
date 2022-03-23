@@ -1,9 +1,0 @@
-\BOOKMARK [1][-]{section.1}{Local matching}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Sum of absolute differences}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Sum of squared differences}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Normalised cross-correlation}{section.1}% 4
-\BOOKMARK [1][-]{section.2}{Cost volume}{}% 5
-\BOOKMARK [1][-]{section.3}{Matching algorithm}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Winner-takes-it-all solution}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Semi-global matching}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Evaluation: compare to ground-truth}{}% 9

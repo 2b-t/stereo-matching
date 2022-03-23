@@ -1,6 +1,14 @@
 *.nbc
 *.nbi
 *.pyc
+doc/**/*.aux
+doc/**/*.bbl
+doc/**/*.blg
+doc/**/*.log
+doc/**/*.out
+doc/**/*.run.xml
+doc/**/*.synctex.gz
+doc/**/*.bib
 src/__pycache__/**
 src/.ipynb_checkpoints/**
 

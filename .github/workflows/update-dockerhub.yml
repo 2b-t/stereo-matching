@@ -2,8 +2,8 @@ name: update-dockerhub
 
 on:
   push:
-    branches:
-      - 'master'
+    paths:
+      - 'docker/Dockerfile'
 
 jobs:
   docker:

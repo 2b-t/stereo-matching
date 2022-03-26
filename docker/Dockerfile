@@ -4,7 +4,7 @@ WORKDIR /code
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Install general tools: Git, Cmake, GCC, OpenMP
+# Install general tools: Git, Cmake, GCC
 RUN apt-get -y update && apt-get -y install \
     build-essential \
     git-all \
@@ -20,11 +20,11 @@ RUN apt-get -y update && apt-get -y install \
     python3-notebook \
     python3-matplotlib
 
-# Install Firefox for Visualisation of Jupyter notebooks
+# For Visualisation of Jupyter notebooks
 RUN apt-get -y update && apt-get -y install \
     firefox
 
-# Install Latex Studio for documentation
+# For documentation
 RUN apt-get -y update && apt-get -y install \
     texlive-full \
     texstudio

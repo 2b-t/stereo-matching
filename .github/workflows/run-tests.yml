@@ -15,5 +15,5 @@ jobs:
         run: | 
           apt-get install python3-parameterized
           cd /stereo_matching
-          python3 -m test.utilities_test
+          python3 -m unittest discover
 

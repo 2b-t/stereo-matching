@@ -29,3 +29,5 @@ RUN apt-get -y update && apt-get -y install \
     texlive-full \
     texstudio
 
+ARG DEBIAN_FRONTEND=dialog
+

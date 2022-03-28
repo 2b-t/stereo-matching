@@ -18,7 +18,8 @@ RUN apt-get -y update && apt-get -y install \
     python3-numpy \
     python3-numba \
     python3-notebook \
-    python3-matplotlib
+    python3-matplotlib \
+    python3-parameterized
 
 # For visualisation of Jupyter notebooks
 RUN apt-get -y update && apt-get -y install \

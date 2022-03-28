@@ -14,4 +14,5 @@ services:
       - ../doc:/code/stereo_matching/doc
       - ../src:/code/stereo_matching/src
       - ../test:/code/stereo_matching/test
+      - ../__init__.py:/code/stereo_matching/__init__.py
 

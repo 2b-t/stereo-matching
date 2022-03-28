@@ -1,0 +1,18 @@
+name: run-tests
+
+on:
+  push
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_WORKSPACE: /workdir
+    container:
+      image: tobitflatscher/stereo-matching
+      volumes:
+        - ${{ github.workspace }}:/workdir
+    steps:
+      - name: Run utilities unittest
+        run: python3 -m test.utilities_test
+

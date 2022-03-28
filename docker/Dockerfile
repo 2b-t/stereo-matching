@@ -4,13 +4,13 @@ WORKDIR /code
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Install general tools: Git, Cmake, GCC
+# General tools
 RUN apt-get -y update && apt-get -y install \
     build-essential \
     git-all \
     cmake
 
-# Install Python3 and libraries
+# Python3 and libraries
 RUN apt-get -y update && apt-get -y install \
     python3 \
     python3-scipy \

@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file matching_cost.py
+# @brief Base class for stereo matching costs
+
 import abc
 import numpy as np
 

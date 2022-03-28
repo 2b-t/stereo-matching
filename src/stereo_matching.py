@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file stereo_matching.py
+# @brief Interface class for setting up stereo matching
+
 from enum import Enum
 import numpy as np
 

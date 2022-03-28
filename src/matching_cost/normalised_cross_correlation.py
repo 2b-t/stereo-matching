@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file normalised_cross_correlation.py
+# @brief Normalised cross correlation (NCC) stereo matching cost
+
 from numba import jit
 import numpy as np
 

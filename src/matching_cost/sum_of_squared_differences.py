@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file sum_of_squared_differences.py
+# @brief Sum of squared differences (SSD) stereo matching cost
+
 from numba import jit
 import numpy as np
 

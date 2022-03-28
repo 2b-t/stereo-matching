@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file utilities.py
+# @brief Different utilities for AccX accuracy measure and file input and output
+
 import numpy as np
 import os
 

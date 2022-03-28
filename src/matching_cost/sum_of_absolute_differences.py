@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file sum_of_absolute_differences.py
+# @brief Sum of absolute differences (SAD) stereo matching cost
+
 from numba import jit
 import numpy as np
 

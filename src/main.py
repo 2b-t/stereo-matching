@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file main.py
+# @brief Command line interface for stereo matching
+
 import argparse
 import matplotlib.pyplot as plt
 import numpy as np
@@ -19,7 +25,20 @@ def main(left_image_path: str, right_image_path: str,
          matching_algorithm_name: str, matching_cost_name: str, 
          max_disparity: int, filter_radius: int, 
          groundtruth_image_path: str, mask_image_path: str, accx_threshold: int,
-         output_path: str, output_name: str = "unknown", is_plot: bool = True) -> None:
+         output_path: str = None, output_name: str = "unknown", is_plot: bool = True) -> None:
+  # Imports images for stereo matching, performs stereo matching, plots results and outputs them to a file
+  #   @param[in] left_image_path:          Path to the image for the left eye
+  #   @param[in] right_image_path:         Path to the image for the right eye
+  #   @param[in] matching_algorithm_name:  Name of the matching algorithm
+  #   @param[in] matching_cost_name:       Name of the matching cost type
+  #   @param[in] max_disparity:            Maximum disparity to consider
+  #   @param[in] filter_radius:            Filter radius to be considered for cost volume
+  #   @param[in] groundtruth_image_path:   Path to the ground truth image
+  #   @param[in] mask_image_path:          Path to the mask for excluding pixels from the AccX accuracy measure
+  #   @param[in] accx_threshold:           Mismatch in disparity to accept for AccX accuracy measure
+  #   @param[in] output_path:              Location of the output path, if None no output is generated
+  #   @param[in] output_name:              Name of the scenario for pre-pending the output file
+  #   @param[in] is_plot:                  Flag for turning plot of results on and off
   
   # Load input images
   left_image = IO.import_image(left_image_path)
@@ -41,7 +60,7 @@ def main(left_image_path: str, right_image_path: str,
     plt.subplot(1,2,2), plt.imshow(right_image, cmap='gray'), plt.title('Right')
     plt.tight_layout()
 
-  # Set-up algorithms
+  # Set-up algorithm
   matching_algorithm = None
   if matching_algorithm_name == "SGM":
     matching_algorithm = SemiGlobalMatching
@@ -60,15 +79,17 @@ def main(left_image_path: str, right_image_path: str,
   else:
     raise ValueError("Matching cost '" + matching_cost_name + "' not recognised!")
 
-  # Compute
+  # Perform stereo matching
   sm = StereoMatching(left_image, right_image, matching_cost, matching_algorithm, max_disparity, filter_radius)
+  print("Performing stereo matching...")
   sm.compute()
+  print("Stereo matching completed.")
   res_image = sm.result()
 
   # Compute accuracy
   try:
     accx = AccX.compute(res_image, groundtruth_image, mask_image, accx_threshold)
-    print("AccX measure: " + str(accx))
+    print("AccX accuracy measure for threshold " + str(accx_threshold) + ": " + str(accx))
   except:
     accx = None
 
@@ -78,9 +99,12 @@ def main(left_image_path: str, right_image_path: str,
     plt.imshow(res_image, cmap='gray')
     plt.show()
   
-  # Output
+  # Output to file
   if output_path is not None:
-    IO.export_image(IO.normalise_image(res_image, groundtruth_image), output_path, output_name, matching_cost_name, matching_algorithm_name, max_disparity, filter_radius, accx_threshold)
+    result_file_path = IO.export_image(IO.normalise_image(res_image, groundtruth_image), 
+                                       output_path, output_name, matching_cost_name, matching_algorithm_name, 
+                                       max_disparity, filter_radius, accx_threshold)
+    print("Exported result to file '" + result_file_path + "'.")
   return
 
 
@@ -104,16 +128,15 @@ if __name__== "__main__":
   parser.add_argument("-n", "--name", type=str, 
                       help="Output file name", default = "unknown")
   parser.add_argument("-p", "--no-plot", action='store_true', 
-                      help="Boolean for de-activating plotting")
+                      help="Flag for de-activating plotting")
   parser.add_argument("-g", "--groundtruth", type=str, 
                       help="Path to groundtruth image", default = None)
   parser.add_argument("-m", "--mask", type=str, 
-                      help="Path to mask image", default = None)
+                      help="Path to mask image for AccX accuracy measure", default = None)
   parser.add_argument("-X", "--accx", type=int, 
                       help="AccX accuracy measure threshold", default = 60)
   args = parser.parse_args()
 
-  # Call main function
   main(args.left, args.right, args.algorithm, args.cost, args.disparity, args.radius, 
        args.groundtruth, args.mask, args.accx, 
        args.output, args.name, not args.no_plot)

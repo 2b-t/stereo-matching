@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file winner_takes_it_all.py
+# @brief Winner-takes-it-all (WTA) stereo matching algorithm
+
 import abc
 import numpy as np
 

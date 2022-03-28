@@ -1,3 +1,8 @@
+# Tobit Flatscher - github.com/2b-t (2022)
+
+# @file semi_global_matching.py
+# @brief Semi-global matching (SGM) stereo matching algorithm
+
 import abc
 from numba import jit
 import numpy as np

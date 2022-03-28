@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get -y install \
     git-all \
     cmake
 
-# Install Python3, Scipy, Numpy, Numba and unittest
+# Install Python3 and libraries
 RUN apt-get -y update && apt-get -y install \
     python3 \
     python3-scipy \
@@ -20,7 +20,7 @@ RUN apt-get -y update && apt-get -y install \
     python3-notebook \
     python3-matplotlib
 
-# For Visualisation of Jupyter notebooks
+# For visualisation of Jupyter notebooks
 RUN apt-get -y update && apt-get -y install \
     firefox
 
@@ -28,5 +28,4 @@ RUN apt-get -y update && apt-get -y install \
 RUN apt-get -y update && apt-get -y install \
     texlive-full \
     texstudio
-
 

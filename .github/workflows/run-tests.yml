@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Run utilities unittest
         run: | 
-          python3-parameterized
+          apt-get install python3-parameterized
           cd /stereo_matching
           python3 -m test.utilities_test
 

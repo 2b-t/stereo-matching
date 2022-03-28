@@ -3,7 +3,7 @@ name: update-dockerhub
 on:
   push:
     paths:
-      - './docker/Dockerfile'
+      - '/docker/Dockerfile'
 
 jobs:
   docker:

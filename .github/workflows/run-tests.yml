@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run utilities unittest
-        run: |
-          ls -a
-          python3 -m unittest discover
+      - name: Run unittests in workspace
+        run: python3 -m unittest discover
 

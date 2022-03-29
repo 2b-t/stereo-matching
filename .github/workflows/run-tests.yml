@@ -11,10 +11,10 @@ jobs:
       volumes:
         - ${{ github.workspace }}:/stereo_matching
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Run utilities unittest
-        run: | 
-          apt-get install python3-parameterized
-          cd /stereo_matching
+        run: |
           ls -a
           python3 -m unittest discover
 

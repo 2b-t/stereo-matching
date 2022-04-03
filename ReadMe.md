@@ -1,3 +1,5 @@
+[![Dockerhub](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml)[![Tests](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml)
+
 # Stereo matching
 
 Author: [Tobit Flatscher](https://github.com/2b-t) (January 2020)

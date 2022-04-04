@@ -14,8 +14,8 @@
     {
       "label": "test",
       "detail": "Run all unit tests and show results.",
-      "type": "process",
-      "command": "python3 ${workspaceFolder}/test/run_tests.py",
+      "type": "shell",
+      "command": "(cd ${workspaceFolder} && python3 -m unittest discover)",
       "group": {
         "kind": "test",
         "isDefault": true

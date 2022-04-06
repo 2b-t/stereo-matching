@@ -29,7 +29,7 @@ class AccX:
     if (mask_image is None):
       mask_image = np.ones(prediction_image.shape)
     
-    number_of_pixels = np.sum(mask_image)
+    number_of_pixels = max(np.sum(mask_image), 1) # Catch error if no pixels selected
     
     weighted_image = mask_image*(np.absolute(prediction_image - groundtruth_image) <= threshold_disparity)
     return 1/number_of_pixels*np.sum(weighted_image)

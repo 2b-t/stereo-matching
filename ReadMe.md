@@ -33,19 +33,29 @@ For the precise details of the involved formulas (matching cost, matching algori
 
 The repository is structured as follows:
 
-- [`data/`](./data/) Directory for the input images (left and right eye)
-- [`doc/`](./doc/) Further explanation, in particular of the computational approach ([`doc/Theory.pdf`](./doc/Theory.pdf))
-- [`docker/`](./docker/) Contains a Docker container as well as a Docker-Compose configuration file
-- [`output/`](./output/) Directory for the resulting depth-image output
-- [`src/main.ipynb`](./src/main.ipynb) The Jupyter notebook that allows a convenient access to the underlying Python functions
-- [`src/stereo_matching.py`](./src/stereo_matching.py) The Python3 implementation of the core functions with Scipy, Scimage, Numba, Numpy and Matplotlib
-- [`test/`](./test/) Contains parametrized unit tests for the implementations
+```bash
+.
+├── data/                  # Directory for the input images (left and right eye)
+├── doc/                   # Further documentation, in particular the computational approach
+├── docker/                # contains a Docker container as well as a Docker-Compose configuration file
+├── output/                # contains the resulting depth-image output
+├── src/
+│   ├── main.ipynb         # The Jupyter notebook that allows a convenient access to the underlying Python functions
+│   └── stereo_matching.py # The Python3 implementation of the core functions with Scipy, Scimage, Numba, Numpy and Matplotlib
+├── test/                  # contains parametrized unit tests for the implementations
+├── .devcontainer/         # contains configuration files for containers in Visual Studio Code
+└── .vscode/               # contains configuration files for Visual Studio Code
+```
+
+
 
 ## 1. Download it
 Either download and copy this folder manually or directly **clone this repository** by typing
 ```
 $ git clone https://github.com/2b-t/stereo-matching.git
 ```
+
+
 ## 2. Launch it
 
 Now you have two options for launching the code. Either you can install all libraries on your system and launch the code there or you can use the Docker container located in [`docker/`](./docker/).

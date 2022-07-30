@@ -1,10 +1,13 @@
-[![Dockerhub](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml) [![Tests](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml)
+[![Dockerhub](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml) [![Tests](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Stereo matching
 
 Author: [Tobit Flatscher](https://github.com/2b-t) (January 2020)
 
-## 0. Overview
+
+
+## Overview
+
 This small tool is a **manual implementation of simple stereo-matching** in Python 3. Two rectified images taken from different views:
 
 Left image             |  Right image

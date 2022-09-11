@@ -1,4 +1,4 @@
-[![Dockerhub](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml) [![Tests](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Dockerhub](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/update-dockerhub.yml) [![Tests](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml/badge.svg)](https://github.com/2b-t/stereo-matching/actions/workflows/run-tests.yml) [![Python 3.8.10](https://img.shields.io/badge/Python-3.8-yellow.svg?style=flat&logo=python)](https://www.python.org/downloads/release/python-3810/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Stereo matching
 
